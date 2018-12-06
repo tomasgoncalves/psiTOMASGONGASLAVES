@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show demo</title>
+  <style>
+  div {
+    background: pink;
+    margin: 3px;
+    width: 500px;
+    display: none;
+    float: left;
+    text-align: center;
+  }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#showr").css({"background-color": "red"});
+    });
+  </script>
+</head>
+<body>
+ 
+<button id="showr">Mostrar/Esconder</button>
+<div>hey</div>
+
+
+ 
+<script>
+$( "#showr" ).click(function() {
+  $( "div" ).first().toggle( "fast", function showNext() {
+    $( this ).next( "div" ).show( "fast", showNext );
+$( "#hidr" ).click(function() {
+  $( "div" ).hide( 1000 );
+  });
+});
+});
+</script>
+
+ 
+</body>
+</html>
